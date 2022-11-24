@@ -1,0 +1,15 @@
+[target.x86_64-unknown-uefi]
+linker="rust-lld"
+rustflags=[
+	"-C",
+	"panic=abort",
+]
+
+[build]
+target="x86_64-unknown-uefi"
+
+[unstable]
+build-std=[
+	"core",
+]
+
