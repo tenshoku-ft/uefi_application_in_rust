@@ -39,6 +39,8 @@ pub struct BootServices{
 	pub hdr:TableHeader,
 	pub _unused0:[UnusedPointer;4],
 	pub get_memory_map:extern "C" fn(*mut usize,*mut MemoryDescriptor,*mut usize,*mut usize,*mut u32)->Status,
+	pub _unused1:[UnusedPointer;21],
+	pub exit_boot_services:extern "C" fn(Handle,usize)->Status,
 }
 
 #[derive(Copy,Clone,Debug)]
